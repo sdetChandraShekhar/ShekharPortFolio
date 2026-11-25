@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0ede3">
+  <title>Chandra Shekhar Bhatt — Freelance QA &amp; Software Testing</title>
+  <meta name="description" content="QA testing services by Chandra Shekhar Bhatt — Manual Web & Mobile Testing, Postman REST API Validation, Regression Suites, and Selenium WebDriver Automation.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; background: #f0ede3; }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #top {
+      font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f3ec;
+      color: #20201e;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .navlink { color: #55554f; text-decoration: none; transition: color .18s ease; }
+    .navlink:hover { color: #d8452a !important; }
+    .hbtn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease;
+    }
+    .hbtn:hover { transform: translateY(-2px); }
+    .btn-svg-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      filter: url(#boil);
+    }
+    .btn-label { position: relative; z-index: 1; white-space: nowrap; }
+
+    .site-hdr {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 250, 247, 0.86);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      border-bottom: 1px solid #e8e6df;
+    }
+    .hdr-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-wrap { display: inline-flex; align-items: baseline; gap: 10px; }
+    .brand-link {
+      font-family: 'Caveat', cursive;
+      font-size: 27px;
+      font-weight: 700;
+      color: #20201e;
+      text-decoration: none;
+      line-height: 1;
+    }
+    .brand-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      color: #8a8780;
+      text-transform: uppercase;
+    }
+    .hdr-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+    }
+    .nav-text { display: flex; align-items: center; gap: 28px; }
+    .navcta {
+      padding: 9px 18px;
+      color: #fbfaf7;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 56px 48px 80px;
+      min-height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: #f5f3ec;
+    }
+    .hero-inner {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 64px;
+      position: relative;
+    }
+    .hero-copy { flex: 1.25; min-width: 0; }
+    .avail-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid #d9d4c7;
+      background: #faf8f1;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #55554f;
+      margin-bottom: 26px;
+    }
+    .avail-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ea864;
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+    .hero-h1 {
+      font-size: clamp(40px, 7.2vw, 76px);
+      font-weight: 800;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: #20201e;
+      margin: 0 0 24px;
+    }
+    .hero-sub {
+      font-size: 19px;
+      line-height: 1.6;
+      color: #55554f;
+      max-width: 540px;
+      margin: 0 0 34px;
+    }
+    .cta-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+    .hero-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 1.8;
+      color: #8a8780;
+    }
+
+    .hero-wire {
+      width: 360px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .wire-cap {
+      font-family: 'Caveat', cursive;
+      font-size: 22px;
+      color: #d8452a;
+      display: block;
+      text-align: right;
+      margin-bottom: 10px;
+      transform: rotate(-3deg);
+    }
+    .wire-card {
+      position: relative;
+      background: #ffffff;
+      padding: 20px;
+      transform: rotate(1.4deg);
+    }
+    .hand-border {
+      position: absolute;
+      inset: 0;
+      border: 2px solid #20201e;
+      border-radius: 18px 14px 20px 13px / 14px 20px 13px 18px;
+      filter: url(#boil);
+      pointer-events: none;
+    }
+    .wire-top {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+    .wire-dot { width: 9px; height: 9px; border-radius: 50%; }
+    .wire-url {
+      margin-left: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #8a8780;
+    }
+    .wire-bar { height: 28px; border-radius: 6px; background: #f2efe6; padding: 8px 12px; margin-bottom: 12px; }
+    .wire-red { width: 42%; height: 10px; border-radius: 5px; background: #d8452a; }
+    .wire-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+    .wire-box { height: 54px; border-radius: 6px; background: #f2efe6; }
+    .wire-line { height: 8px; border-radius: 4px; background: #ebe7dc; margin-bottom: 8px; }
+    .wire-btn {
+      margin-top: 14px;
+      height: 40px;
+      border-radius: 7px;
+      background: #20201e;
+      color: #fbfaf7;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .free-seal {
+      position: absolute;
+      left: -26px;
+      bottom: -22px;
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      background: #d8452a;
+      border: 2.5px solid #20201e;
+      color: #fbfaf7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Caveat', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 0.95;
+      transform: rotate(-10deg);
+      filter: url(#boil);
+    }
+
+    .usp-band {
+      background: #20201e;
+      color: #fbfaf7;
+      padding: 64px 48px;
+    }
+    .usp-row {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .usp-eye {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #d8452a;
+      margin-bottom: 10px;
+    }
+    .usp-h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .usp-p { font-size: 16.5px; color: #bdbab2; margin: 0; max-width: 560px; line-height: 1.55; }
+
+    .sec { padding: 96px 48px; background: #f5f3ec; }
+    .sec-alt { background: #eceadf; }
+    .sec-dark { background: #20201e; color: #fbfaf7; }
+    .sec-inner { max-width: 1100px; margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9a9a92;
+      margin-bottom: 10px;
+    }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #d8452a; }
+    .sec-h2 {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(40px, 9vw, 58px);
+      font-weight: 700;
+      line-height: 1.04;
+      margin: 0 0 18px;
+    }
+    .sec-lead { font-size: 18px; line-height: 1.65; color: #55554f; max-width: 620px; margin: 0 0 48px; }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .svc {
+      position: relative;
+      background: #faf9f5;
+      padding: 28px;
+      transition: transform .2s ease;
+    }
+    .svc:hover { transform: translateY(-4px) rotate(-.4deg); }
+    .svc-num { font-family: 'Caveat', cursive; font-size: 30px; color: #d8452a; margin-bottom: 10px; display: block; }
+    .svc-h3 { font-size: 19px; font-weight: 800; margin: 0 0 10px; }
+    .svc-p { font-size: 15px; line-height: 1.6; color: #55554f; margin: 0; }
+
+    .eng-row { display: flex; gap: 56px; align-items: flex-start; }
+    .eng-left { flex: 1; }
+    .eng-right { flex: 1.25; display: flex; flex-direction: column; gap: 18px; }
+    .team-note {
+      margin-top: 28px;
+      padding: 24px;
+      background: #f3ebdd;
+      border: 1.5px dashed #c8b6a2;
+      border-radius: 12px;
+    }
+    .eng-card { position: relative; padding: 24px 26px; background: #faf9f5; }
+
+    .case-row { display: flex; gap: 64px; align-items: flex-start; }
+    .case-left { flex: 1.3; }
+    .case-right { flex: 1; }
+    .kpi-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid #3a3a36;
+    }
+    .kpi-k { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; color: #8a8780; text-transform: uppercase; }
+    .kpi-v { font-family: 'Caveat', cursive; font-size: 32px; font-weight: 700; color: #fbfaf7; }
+
+    .proc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 44px; }
+    .proc-n { font-family: 'Caveat', cursive; font-size: 46px; font-weight: 700; color: #d8452a; line-height: 1; margin-bottom: 10px; display: block; }
+    .proc-h3 { font-size: 18px; font-weight: 800; margin: 0 0 8px; }
+    .proc-p { font-size: 14.5px; line-height: 1.6; color: #55554f; margin: 0; }
+
+    .center-cta { text-align: center; padding: 96px 48px; background: #eceadf; }
+    .center-h2 { font-size: clamp(34px, 6vw, 52px); font-weight: 800; letter-spacing: -0.025em; margin: 0 0 16px; }
+    .center-sub { font-size: 18px; line-height: 1.6; color: #55554f; max-width: 520px; margin: 0 auto 32px; }
+    .foot-links {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #d9d5c8;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-inner, .eng-row, .case-row { flex-direction: column; gap: 40px; }
+      .hero-wire { width: 100%; max-width: 340px; }
+      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+      .proc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .hdr-inner { padding: 12px 20px; gap: 12px; }
+      .brand-link { font-size: 22px; white-space: nowrap; }
+      .brand-badge { display: none; }
+      .nav-text { display: none !important; }
+      .hero { padding: 32px 20px 60px; min-height: 0; }
+      .sec, .usp-band, .center-cta { padding: 60px 20px; }
+      .svc-grid, .proc-grid { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none" aria-hidden="true">
+    <defs>
+      <filter id="boil">
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise" seed="2"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <div id="top">
+    <header class="site-hdr">
+      <div class="hdr-inner">
+        <div class="brand-wrap">
+          <a href="index.html" class="brand-link">Chandra Shekhar Bhatt</a>
+          <span class="brand-badge">QA Services</span>
+        </div>
+        <nav class="hdr-nav">
+          <div class="nav-text">
+            <a href="#services" class="navlink">services</a>
+            <a href="#work" class="navlink">how it works</a>
+            <a href="#proof" class="navlink">case study</a>
+            <a href="index.html" class="navlink">← portfolio</a>
+          </div>
+          <a href="mailto:bhattchandrashekhar56@gmail.com" class="navcta hbtn">
+            <svg class="btn-svg-bg" viewBox="0 0 130 40" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M8,3 Q65,1 122,4 Q128,20 123,36 Q65,39 7,35 Q2,20 8,3 Z" fill="#d8452a"/>
+            </svg>
+            <span class="btn-label">get in touch →</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="avail-pill"><span class="avail-dot"></span> Open to QA &amp; SDET opportunities</div>
+          <h1 class="hero-h1">Your product, tested before users find the bugs.</h1>
+          <p class="hero-sub">
+            QA Engineer &amp; aspiring SDET focused on thorough manual testing, REST API validation in Postman, mobile app testing, and Java + Selenium automation. Clear bug reports, reproducible steps, and reliable releases.
+          </p>
+          <div class="cta-btns">
+            <a href="mailto:bhattchandrashekhar56@gmail.com" class="hbtn" style="padding:16px 30px;font-size:15px;font-weight:600;color:#fbfaf7;">
+              <svg class="btn-svg-bg" viewBox="0 0 220 56" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M10,4 Q110,1 210,5 Q217,28 211,51 Q110,55 9,50 Q3,28 10,4 Z" fill="#d8452a"/>
+              </svg>
+              <span class="btn-label">Email me →</span>
+            </a>
+            <a href="assets/Chandra_Shekhar_Bhatt.pdf" download="Chandra_Shekhar_Bhatt.pdf" class="hbtn" style="padding:16px 28px;font-size:15px;font-weight:600;color:#20201e;">
+              <svg class="btn-svg-bg" viewBox="0 0 180 56" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M10,4 Q90,1 170,5 Q177,28 171,51 Q90,55 9,50 Q3,28 10,4 Z" fill="none" stroke="#20201e" stroke-width="2.2"/>
+              </svg>
+              <span class="btn-label">Download CV ↓</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            B.Tech CSE (81.74%) &nbsp;·&nbsp; Manual · API · Selenium WebDriver &nbsp;·&nbsp; Noida, Uttar Pradesh
+          </div>
+        </div>
+
+        <div class="hero-wire">
+          <span class="wire-cap">tested end-to-end ↴</span>
+          <div class="wire-card">
+            <div class="hand-border"></div>
+            <div class="wire-top">
+              <span class="wire-dot" style="background:#d8452a;"></span>
+              <span class="wire-dot" style="background:#e6b84c;"></span>
+              <span class="wire-dot" style="background:#4aa564;"></span>
+              <span class="wire-url">qa-suite.app</span>
+            </div>
+            <div class="wire-bar"><div class="wire-red"></div></div>
+            <div class="wire-grid">
+              <div class="wire-box"></div>
+              <div class="wire-box"></div>
+            </div>
+            <div class="wire-line" style="width:92%;"></div>
+            <div class="wire-line" style="width:74%;"></div>
+            <div class="wire-btn">✓ 200 OK · QA Passed</div>
+            <div class="free-seal">
+              <span>100%</span>
+              <span style="font-size:19px;">VERIFIED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="usp-band">
+      <div class="usp-row">
+        <div>
+          <div class="usp-eye">Quality without guesswork</div>
+          <h2 class="usp-h2">Thorough test coverage before every release.</h2>
+          <p class="usp-p">Positive, negative, and edge-case validation across UI workflows, REST APIs, and production sanity cycles.</p>
+        </div>
+        <a href="#proof" class="hbtn" style="padding:14px 26px;font-size:14.5px;font-weight:600;color:#20201e;">
+          <svg class="btn-svg-bg" viewBox="0 0 210 52" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M10,4 Q105,1 200,5 Q207,26 201,47 Q105,51 9,46 Q3,26 10,4 Z" fill="#e8a08f"/>
+          </svg>
+          <span class="btn-label">See real QA results →</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="services" class="sec sec-alt">
+      <div class="sec-inner">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> what I can test for you</div>
+        <h2 class="sec-h2">Coverage across web, mobile &amp; APIs.</h2>
+        <p class="sec-lead">Hands-on QA practices grounded in real internship work across web applications, Android/iOS apps, REST APIs, and EV charging systems.</p>
+
+        <div class="svc-grid">
+          <div class="svc">
+            <div class="hand-border"></div>
+            <span class="svc-num">01</span>
+            <h3 class="svc-h3">Manual Functional QA</h3>
+            <p class="svc-p">UI elements, forms, buttons, dashboards, and business workflows tested against positive, negative, and edge-case scenarios.</p>
+          </div>
+          <div class="svc">
+            <div class="hand-border"></div>
+            <span class="svc-num">02</span>
+            <h3 class="svc-h3">Postman REST API Testing</h3>
+            <p class="svc-p">Validating HTTP methods, request parameters, status codes, and JSON response structures before frontend integration.</p>
+          </div>
+          <div class="svc">
+            <div class="hand-border"></div>
+            <span class="svc-num">03</span>
+            <h3 class="svc-h3">Regression &amp; Sanity Suites</h3>
+            <p class="svc-p">Structured regression and production sanity runs to catch regressions early and verify fixes on live deployments.</p>
+          </div>
+          <div class="svc">
+            <div class="hand-border"></div>
+            <span class="svc-num">04</span>
+            <h3 class="svc-h3">Android &amp; iOS Testing</h3>
+            <p class="svc-p">Cross-platform mobile application validation covering user journeys, form validation, and exploratory edge cases.</p>
+          </div>
+          <div class="svc">
+            <div class="hand-border"></div>
+            <span class="svc-num">05</span>
+            <h3 class="svc-h3">Selenium &amp; TestNG Practice</h3>
+            <p class="svc-p">Building maintainable Java + Selenium WebDriver + TestNG test automation scripts as part of my SDET progression.</p>
+          </div>
+          <div class="svc">
+            <div class="hand-border"></div>
+            <span class="svc-num">06</span>
+            <h3 class="svc-h3">EV Charging Domain QA</h3>
+            <p class="svc-p">Testing charger connectivity, booking flows, remote start transactions, and OCPP / OCPI charging session lifecycles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-inner eng-row">
+        <div class="eng-left">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> how I collaborate</div>
+          <h2 class="sec-h2">Structured QA.</h2>
+          <p style="font-size:17px;line-height:1.65;color:#55554f;">
+            Whether joining an agile QA team full-time or supporting release testing, I focus on clear communication with developers and fast feedback loops.
+          </p>
+          <div class="team-note">
+            <strong style="display:block;margin-bottom:6px;font-size:16px;">Clear defect reproduction</strong>
+            <span style="font-size:14.5px;color:#55554f;line-height:1.55;">Every bug report includes exact steps, payloads/status codes, expected vs. actual results, and prompt re-verification once fixed.</span>
+          </div>
+        </div>
+        <div class="eng-right">
+          <div class="eng-card">
+            <div class="hand-border"></div>
+            <h3 style="margin:0 0 6px;font-size:18px;font-weight:800;">Full-Time QA / SDET Roles</h3>
+            <p style="margin:0;font-size:15px;color:#55554f;line-height:1.55;">Seeking entry-level QA Engineering and Software Development in Test (SDET) opportunities with engineering-first teams.</p>
+          </div>
+          <div class="eng-card">
+            <div class="hand-border"></div>
+            <h3 style="margin:0 0 6px;font-size:18px;font-weight:800;">API &amp; Web Release Validation</h3>
+            <p style="margin:0;font-size:15px;color:#55554f;line-height:1.55;">Focused test case design, Postman collection verification, and production sanity checks around release windows.</p>
+          </div>
+          <div class="eng-card">
+            <div class="hand-border"></div>
+            <h3 style="margin:0 0 6px;font-size:18px;font-weight:800;">Root Cause Analysis (RCA)</h3>
+            <p style="margin:0;font-size:15px;color:#55554f;line-height:1.55;">Investigating recurring booking, workflow, and transaction failures to help teams improve reliability metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="sec sec-dark">
+      <div class="sec-inner case-row">
+        <div class="case-left">
+          <div class="eyebrow" style="color:#8a8780;"><span class="eyebrow-dot"></span> case study</div>
+          <h2 class="sec-h2" style="color:#fbfaf7;">VIDA Web &amp; EV Charging</h2>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8a8780;margin-bottom:24px;">TECHPERSPECT SOFTWARE · JUL 2026 — PRESENT</div>
+          <p style="font-size:17px;line-height:1.65;color:#d6d3cb;margin:0 0 18px;">
+            Performed manual functional testing on the VIDA web application across UI elements, forms, buttons, dashboards, and end-to-end business workflows, paired with REST API testing in Postman.
+          </p>
+          <p style="font-size:16.5px;line-height:1.65;color:#bdbab2;margin:0 0 28px;">
+            Tested EV charging workflows — charger connectivity, booking, remote start transactions, and OCPP/OCPI session validation — and investigated booking failures through Root Cause Analysis, helping lift booking success from 50% to 70% under senior guidance.
+          </p>
+          <a href="index.html#projects" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#e8a08f;text-decoration:none;">see it in the portfolio →</a>
+        </div>
+
+        <div class="case-right">
+          <div class="kpi-row"><span class="kpi-k">Booking RCA</span><span class="kpi-v">50% → 70%</span></div>
+          <div class="kpi-row"><span class="kpi-k">Protocols</span><span class="kpi-v">OCPP &amp; OCPI</span></div>
+          <div class="kpi-row"><span class="kpi-k">API Tooling</span><span class="kpi-v">Postman REST</span></div>
+          <div class="kpi-row"><span class="kpi-k">Role</span><span class="kpi-v">QA Intern</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="sec">
+      <div class="sec-inner">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> how it works</div>
+        <h2 class="sec-h2">Simple, structured QA.</h2>
+        <div class="proc-grid">
+          <div>
+            <span class="proc-n">1</span>
+            <h3 class="proc-h3">Understand flows</h3>
+            <p class="proc-p">Review requirements, SDLC/STLC scope, API contracts, and critical user paths.</p>
+          </div>
+          <div>
+            <span class="proc-n">2</span>
+            <h3 class="proc-h3">Design test cases</h3>
+            <p class="proc-p">Write positive, negative, and edge-case scenarios covering UI, mobile, and JSON APIs.</p>
+          </div>
+          <div>
+            <span class="proc-n">3</span>
+            <h3 class="proc-h3">Execute &amp; report</h3>
+            <p class="proc-p">Run functional, regression, and sanity passes with clear reproduction steps for every defect.</p>
+          </div>
+          <div>
+            <span class="proc-n">4</span>
+            <h3 class="proc-h3">Verify &amp; automate</h3>
+            <p class="proc-p">Re-test fixes with developers and expand repeatable checks using Selenium &amp; TestNG.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="center-cta">
+      <div class="avail-pill"><span class="avail-dot"></span> Available for QA &amp; SDET roles</div>
+      <h2 class="center-h2">Looking for a dedicated QA Engineer?</h2>
+      <p class="center-sub">Let's connect on QA Engineering, Manual &amp; API Testing, or entry-level SDET opportunities.</p>
+      <div class="cta-btns" style="justify-content:center;">
+        <a href="mailto:bhattchandrashekhar56@gmail.com" class="hbtn" style="padding:16px 30px;font-size:15px;font-weight:600;color:#fbfaf7;">
+          <svg class="btn-svg-bg" viewBox="0 0 260 56" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M10,4 Q130,1 250,5 Q257,28 251,51 Q130,55 9,50 Q3,28 10,4 Z" fill="#d8452a"/>
+          </svg>
+          <span class="btn-label">bhattchandrashekhar56@gmail.com</span>
+        </a>
+        <a href="tel:+919125358012" class="hbtn" style="padding:16px 28px;font-size:15px;font-weight:600;color:#20201e;">
+          <svg class="btn-svg-bg" viewBox="0 0 180 56" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M10,4 Q90,1 170,5 Q177,28 171,51 Q90,55 9,50 Q3,28 10,4 Z" fill="none" stroke="#20201e" stroke-width="2.2"/>
+          </svg>
+          <span class="btn-label">+91-9125358012</span>
+        </a>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" class="navlink">← full portfolio</a>
+        <a href="https://linkedin.com/in/chandra-shekhar-bhatt-027577258" target="_blank" rel="noopener noreferrer" class="navlink">LinkedIn ↗</a>
+        <a href="https://github.com/sdetChandraShekhar" target="_blank" rel="noopener noreferrer" class="navlink">GitHub ↗</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
