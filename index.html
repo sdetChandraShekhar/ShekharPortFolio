@@ -164,7 +164,7 @@
     .hero {
       position: relative;
       min-height: calc(100vh - 60px);
-      padding: 40px 48px 80px;
+      padding: 185px 48px 80px;
       display: flex;
       align-items: center;
       background: #f5f3ec;
@@ -898,6 +898,10 @@
     [data-anim="draw"].in path { animation: draw .75s ease forwards; }
 
     /* Responsive Breakpoints */
+    @media (max-width: 1150px) {
+      .hero-sticky-note { display: none !important; }
+      .hero { padding: 56px 36px 72px; }
+    }
     @media (max-width: 920px) {
       .hero-row { gap: 36px; padding: 0 20px; }
       .about-row { flex-direction: column; gap: 36px; }
@@ -998,7 +1002,7 @@
           <path d="M12 2.5 L14.8 8.8 L21.5 9.5 L16.4 14 L17.9 20.6 L12 17.1 L6.1 20.6 L7.6 14 L2.5 9.5 L9.2 8.8 Z" stroke="#9a9a92" stroke-width="1.4" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="doodle" style="top:10%;left:32%;transform:rotate(-3deg);z-index:1;" aria-hidden="true">
+      <div class="doodle hero-sticky-note" style="top:22px;left:38%;transform:rotate(-3deg);z-index:1;" aria-hidden="true">
         <div style="position:relative;width:250px;padding:16px 20px;background:#faf8f1;border:1.8px solid #3a3a35;filter:url(#boil);font-family:'Caveat',cursive;font-size:19px;color:#3a3a35;">
           <div style="position:absolute;top:-11px;left:-14px;width:72px;height:20px;background:rgba(216,69,42,0.18);transform:rotate(-11deg);"></div>
           <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:#9a9a92;margin-bottom:6px;">// THE FOCUS</div>
@@ -1022,12 +1026,12 @@
           <path d="M2 12 Q14 2 26 12 T50 12 T74 12 T84 10" stroke="#9a9a92" stroke-width="1.5" fill="none" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="doodle" style="bottom:5%;right:4%;font-family:'Caveat',cursive;font-size:22px;color:#b0ada5;transform:rotate(-3deg);text-align:right;line-height:1.15;" aria-hidden="true">
+      <div class="doodle" style="bottom:14px;right:24px;font-family:'Caveat',cursive;font-size:22px;color:#b0ada5;transform:rotate(-3deg);text-align:right;line-height:1.15;" aria-hidden="true">
         test early,<br>ship with confidence
       </div>
       <div class="doodle" style="bottom:19%;right:14%;font-family:'Caveat',cursive;font-size:66px;color:#d6d2c7;font-weight:700;line-height:1;" aria-hidden="true">;</div>
 
-      <div class="egg" style="bottom:13%;left:6.5%;opacity:.58;animation:floaty 5.5s ease-in-out infinite;" title="Launch test suite">
+      <div class="egg" style="bottom:6%;left:2.8%;opacity:.58;animation:floaty 5.5s ease-in-out infinite;" title="Launch test suite">
         <svg width="40" height="56" viewBox="0 0 40 56" fill="none">
           <path d="M20 4 C28 14 30 26 28 38 L12 38 C10 26 12 14 20 4 Z" stroke="#55554f" stroke-width="1.7" stroke-linejoin="round"/>
           <circle cx="20" cy="21" r="4" stroke="#55554f" stroke-width="1.6"/>
