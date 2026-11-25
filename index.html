@@ -200,7 +200,13 @@
       position: relative;
       z-index: 2;
     }
-    .hero-copy { flex: 1; min-width: 0; }
+    .hero-copy { flex: 1; min-width: 0; position: relative; }
+    .hero-sticky-note {
+      top: -38px;
+      left: 295px;
+      transform: rotate(-3deg);
+      z-index: 1;
+    }
     #heyWord {
       font-family: 'Caveat', cursive;
       font-size: clamp(72px, 17vw, 150px);
@@ -218,7 +224,10 @@
       font-size: clamp(26px, 4vw, 32px);
       line-height: 1.2;
       color: #d8452a;
-      margin-bottom: 24px;
+      min-height: 120px;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 18px;
       animation: heyWobble .45s ease;
     }
     .hero-h1 {
@@ -899,11 +908,8 @@
     [data-anim="draw"].in path { animation: draw .75s ease forwards; }
 
     /* Responsive Breakpoints */
-    @media (max-width: 1220px), (max-height: 760px) {
+    @media (max-width: 1020px) {
       .hero-sticky-note { display: none !important; }
-    }
-    @media (max-width: 1150px) {
-      .hero { padding: 56px 36px 72px; }
     }
     @media (max-width: 920px) {
       .hero-row { gap: 36px; padding: 0 20px; }
@@ -1005,16 +1011,6 @@
           <path d="M12 2.5 L14.8 8.8 L21.5 9.5 L16.4 14 L17.9 20.6 L12 17.1 L6.1 20.6 L7.6 14 L2.5 9.5 L9.2 8.8 Z" stroke="#9a9a92" stroke-width="1.4" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="doodle hero-sticky-note" style="top:6%;left:35%;transform:rotate(-3deg);z-index:1;" aria-hidden="true">
-        <div style="position:relative;width:250px;padding:16px 20px;background:#faf8f1;border:1.8px solid #3a3a35;filter:url(#boil);font-family:'Caveat',cursive;font-size:19px;color:#3a3a35;">
-          <div style="position:absolute;top:-11px;left:-14px;width:72px;height:20px;background:rgba(216,69,42,0.18);transform:rotate(-11deg);"></div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:#9a9a92;margin-bottom:6px;">// THE FOCUS</div>
-          <div><span style="color:#d8452a;font-weight:700;">✓</span> manual &amp; web testing</div>
-          <div><span style="color:#d8452a;font-weight:700;">✓</span> Postman REST APIs</div>
-          <div><span style="color:#d8452a;font-weight:700;">✓</span> EV charging (OCPP/OCPI)</div>
-          <div style="color:#8a8780;">☐ Selenium &amp; SDET mastery</div>
-        </div>
-      </div>
       <div class="doodle" style="bottom:20%;left:56%;opacity:.35;" aria-hidden="true">
         <svg width="80" height="70" viewBox="0 0 80 70" fill="none">
           <path d="M72 8 Q34 6 16 56" stroke="#9a9a92" stroke-width="1.5" stroke-linecap="round"/>
@@ -1055,6 +1051,16 @@
 
         <div class="hero-row">
           <div class="hero-copy">
+            <div class="doodle hero-sticky-note" aria-hidden="true">
+              <div style="position:relative;width:238px;padding:14px 18px;background:#faf8f1;border:1.8px solid #3a3a35;filter:url(#boil);font-family:'Caveat',cursive;font-size:18.5px;color:#3a3a35;">
+                <div style="position:absolute;top:-11px;left:-14px;width:72px;height:20px;background:rgba(216,69,42,0.18);transform:rotate(-11deg);"></div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:#9a9a92;margin-bottom:5px;">// THE FOCUS</div>
+                <div><span style="color:#d8452a;font-weight:700;">✓</span> manual &amp; web testing</div>
+                <div><span style="color:#d8452a;font-weight:700;">✓</span> Postman REST APIs</div>
+                <div><span style="color:#d8452a;font-weight:700;">✓</span> EV charging (OCPP/OCPI)</div>
+                <div style="color:#8a8780;">☐ Selenium &amp; SDET mastery</div>
+              </div>
+            </div>
             <div id="heyWord" role="button" tabindex="0" aria-label="Say hello">Hey<span style="color:#d8452a">.</span></div>
             <h1 class="hero-h1">I'm Chandra Shekhar — QA Engineer &amp; SDET</h1>
             <p class="hero-lead">
